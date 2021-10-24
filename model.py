@@ -23,4 +23,4 @@ def predict_duration(attributes: np.ndarray):
     pred = model.predict(attributes)
     print("Duration predicted")
 
-    return int(pred[0])
+    return int([pred])
