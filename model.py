@@ -17,10 +17,10 @@ model= joblib.load(curr_path + "/model1.joblib")
 
 
 print(model)
-def predict_duration(attributes: np.ndarray):
+def predict_duration(attributes: list):
     """ Returns Bike Trip Duration value"""
 
-    pred = model.predict(attributes)
+    pred = model.predict([attributes])
     print("Duration predicted")
 
-    return int([pred])
+    return int(pred)

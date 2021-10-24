@@ -32,7 +32,7 @@ with st.form("prediction_form"):
 
 if submit_val:
     # If submit is pressed == True
-    attribute = np.array([distance, haversine,pmonth,pday, phour,pmin,pdweek,dmonth,dday, dhour,dmin,ddweek, temp, humid, solar, dust]).reshape(1,-1)
+    attribute = [distance, haversine,pmonth,pday, phour,pmin,pdweek,dmonth,dday, dhour,dmin,ddweek, temp, humid, solar, dust]
 
 
     if attribute.shape == (1,16):
