@@ -35,7 +35,7 @@ if submit_val:
     attribute = np.array([distance, haversine,pmonth,pday, phour,
                         pmin,pdweek,dmonth,dday, dhour,
                         dmin,ddweek, temp,
-                        humid, solar, dust]).reshape(1,-1)
+                        humid, solar, dust])
 
 
     if attribute.shape == (1,16):
