@@ -24,19 +24,23 @@ with st.form("prediction_form"):
     dmin = st.slider("Dropoff Minute: ", 0, 59, value=0, format="%d")
     ddweek=st.slider("Drop Week: ",  min_value=0, max_value=6)
     temp = st.number_input("Temp: ")
+    precip=st.number_input("Precipitation: ")
+    wind=st.number_input("wind: ")
     humid = st.number_input("Humid: ")
     solar = st.number_input("Solar: ")
+    snow=st.number_input("Snow: ")
+    groundtemp=st.number_input("GroundTemp: ")
     dust = st.number_input("Dust: ")
 
     submit_val = st.form_submit_button("Predict Duration")
 
 if submit_val:
     # If submit is pressed == True
-    attribute = [distance, haversine,pmonth,pday, phour,pmin,pdweek,dmonth,dday, dhour,dmin,ddweek, temp, humid, solar, dust]
+    attribute = [distance, haversine,pmonth,pday, phour,pmin,pdweek,dmonth,dday, dhour,dmin,ddweek, temp,precip, wind, humid, solar,snow,groundtemp, dust]
 
 
-    #if attribute.shape == (1,16):
-        #print("attributes valid")
+    if attribute.shape == (1,20):
+        print("attributes valid")
         
 
     value = predict_duration(attributes= attribute)
