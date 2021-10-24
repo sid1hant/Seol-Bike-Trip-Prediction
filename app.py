@@ -39,8 +39,8 @@ if submit_val:
     attribute = [distance, haversine,pmonth,pday, phour,pmin,pdweek,dmonth,dday, dhour,dmin,ddweek, temp,precip, wind, humid, solar,snow,groundtemp, dust]
 
 
-    if attribute.shape == (1,20):
-        print("attributes valid")
+    #if attribute.shape == (1,20):
+        #print("attributes valid")
         
 
     value = predict_duration(attributes= attribute)
